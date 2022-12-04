@@ -2,7 +2,6 @@ package com.example.pdfdemo.controller;
 
 import com.example.pdfdemo.entity.User;
 import com.example.pdfdemo.service.UserService;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,6 +20,13 @@ public class UserController {
     @PostMapping("/getUser")
     public User getUser(){
         return userService.getUser();
+    }
+    @PostMapping
+    public void createUser(){
+        User user = new User();
+        user.setId("8977898");
+        user.setUserName("lisi");
+        userService.createUser(user);
     }
 
 }

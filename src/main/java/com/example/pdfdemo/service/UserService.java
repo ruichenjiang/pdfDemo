@@ -11,4 +11,8 @@ public class UserService {
         user.setUserName("jiang");
         return user;
     }
+
+    public void createUser(User user){
+
+    }
 }
